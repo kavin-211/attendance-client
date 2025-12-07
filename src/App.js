@@ -1,19 +1,20 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HomePage from './components/HomePage';
-import AdminDashboard from './components/AdminDashboard';
-import './App.css';
+import { useEffect, useState } from "react";
 
 function App() {
+  const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    fetch("http://localhost:5000/api/message")
+      .then(res => res.json())
+      .then(data => setMessage(data.message))
+      .catch(err => console.log(err));
+  }, []);
+
   return (
-    <Router>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/admin/*" element={<AdminDashboard />} />
-        </Routes>
-      </div>
-    </Router>
+    <div style={{padding: "40px"}}>
+      <h1>Simple MERN Stack App</h1>
+      <p>Backend says: {message}</p>
+    </div>
   );
 }
 
