@@ -4,7 +4,7 @@ function App() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/message")
+    fetch("https://attendance-server-8gjy.onrender.com/api/message")
       .then(res => res.json())
       .then(data => setMessage(data.message))
       .catch(err => console.log(err));
