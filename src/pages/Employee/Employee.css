@@ -1,0 +1,228 @@
+.employee-home-container {
+  padding: 20px;
+}
+
+.employee-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.employee-header h1 {
+  color: #2c3e50;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.current-date {
+  background: #3498db;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.attendance-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.attendance-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.status-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+}
+
+.status-circle.checked-in {
+  background: #d4edda;
+  color: #28a745;
+}
+
+.status-circle.checked-out {
+  background: #f8d7da;
+  color: #dc3545;
+}
+
+.status-text h3 {
+  margin: 0 0 8px 0;
+  color: #2c3e50;
+  font-size: 20px;
+}
+
+.status-text p {
+  margin: 0;
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.attendance-times {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.time-box {
+  text-align: center;
+  min-width: 120px;
+}
+
+.time-label {
+  display: block;
+  color: #6c757d;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.time-value {
+  display: block;
+  color: #2c3e50;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.attendance-action {
+  text-align: center;
+  border-top: 1px solid #e9ecef;
+  padding-top: 30px;
+}
+
+.check-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  min-width: 200px;
+}
+
+.check-btn.check-out {
+  background: #dc3545;
+}
+
+.check-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.check-btn:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+}
+
+.action-note {
+  color: #6c757d;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.quick-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.stat-icon {
+  font-size: 40px;
+  color: #3498db;
+}
+
+.stat-content h3 {
+  margin: 0 0 8px 0;
+  color: #6c757d;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.stat-value {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.stat-label {
+  margin: 4px 0 0 0;
+  color: #95a5a6;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .employee-home-container {
+    padding: 15px;
+  }
+  
+  .employee-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .current-date {
+    align-self: stretch;
+    text-align: center;
+  }
+  
+  .attendance-card {
+    padding: 20px;
+  }
+  
+  .attendance-status {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .attendance-times {
+    justify-content: space-around;
+  }
+  
+  .time-box {
+    flex: 1;
+    min-width: 100px;
+  }
+  
+  .check-btn {
+    width: 100%;
+    min-width: auto;
+  }
+}
